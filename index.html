@@ -159,6 +159,8 @@
   .note:last-child{border-bottom:none;}
   .note::before{counter-increment:note; content:counter(note) "."; font-family:var(--mono); color:var(--stamp); width:22px; flex-shrink:0; font-size:14px;}
   .note h3{margin:0 0 4px; font-size:14.5px; font-weight:700;}
+  .note h3 a{color:inherit; text-decoration:underline; text-decoration-color:var(--stamp); text-underline-offset:3px;}
+  .note h3 a:hover{color:var(--stamp);}
   .note p{margin:0; font-size:13.5px; color:var(--ink-dim);}
 
   /* ---------- bill of materials (skills) ---------- */
@@ -197,11 +199,11 @@
     <span>REV: <b>D</b></span>
     <span class="tb-status">STATUS: OPEN TO WORK</span>
     <nav class="tb-nav">
-      <a href="#history">revision-history</a>
-      <a href="#sheets">drawing-sheets</a>
-      <a href="#notes">general-notes</a>
-      <a href="#bom">bill-of-materials</a>
-      <a href="#issued">issued-to</a>
+      <a href="#history">Experience</a>
+      <a href="#sheets">Projects</a>
+      <a href="#notes">Research &amp; Leadership</a>
+      <a href="#bom">Skills</a>
+      <a href="#issued">Contact</a>
     </nav>
   </div>
 </div>
@@ -209,7 +211,7 @@
 <div class="wrap">
 
   <section class="hero">
-    <div class="sheet-label">Portfolio / résumé — drawn to scale</div>
+    <div class="sheet-label">Résumé</div>
     <h1>Production AI systems that survive contact with real users.</h1>
     <p class="lede">
       I'm <strong>Pallavi Kailas</strong>, an engineer working across <strong>LLM/RAG pipelines</strong>,
@@ -266,7 +268,7 @@
 
   <section id="history">
     <div class="section-head"><span class="idx">01</span><h2>Revision History — Experience</h2></div>
-    <div class="section-sub">listed newest revision first, per drafting convention</div>
+    <div class="section-sub">Feb 2026 – present, four internships in</div>
 
     <div class="rev-head-row"><span>Rev</span><span>Date</span><span>Description</span></div>
 
@@ -378,7 +380,7 @@
     <div class="notes">
       <div class="note">
         <div>
-          <h3>Mars Rover Manipal — AI Researcher (2023–25)</h3>
+          <h3><a href="https://arxiv.org/abs/2402.12843" target="_blank" rel="noopener">Mars Rover Manipal — AI Researcher (2023–25)</a></h3>
           <p>Co-authored "Solar Panel Segmentation: Self-Supervised Learning for Imperfect Datasets," accepted at ICLR (Tiny Papers track). The method reached an IoU of 0.8911 on noisy imagery.</p>
         </div>
       </div>
