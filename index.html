@@ -55,6 +55,7 @@
   .titleblock{
     border-bottom:1px solid var(--line);
     background:rgba(18,51,90,0.55);
+    position:sticky; top:0; z-index:20;
   }
   .tb-inner{
     max-width:var(--maxw); margin:0 auto; padding:12px 28px;
@@ -63,10 +64,16 @@
   }
   .tb-inner b{color:var(--ink); font-weight:700;}
   .tb-status{color:var(--stamp) !important; margin-left:auto;}
-  nav.tb-nav{display:flex; gap:16px; width:100%; margin-top:6px; padding-top:6px; border-top:1px dashed rgba(93,135,168,0.4);}
-  nav.tb-nav a{color:var(--ink-dim); text-decoration:none; font-size:11px;}
+  nav.tb-nav{
+    display:flex; gap:16px; width:100%; margin-top:6px; padding-top:6px;
+    border-top:1px dashed rgba(93,135,168,0.4);
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+  }
+  nav.tb-nav a{color:var(--ink-dim); text-decoration:none; font-size:11px; white-space:nowrap; flex-shrink:0;}
   nav.tb-nav a:hover{color:var(--stamp);}
-  @media (max-width:640px){ nav.tb-nav{display:none;} .tb-status{margin-left:0;} }
+  nav.tb-nav::-webkit-scrollbar{height:3px;}
+  nav.tb-nav::-webkit-scrollbar-thumb{background:var(--line);}
+  @media (max-width:640px){ .tb-status{margin-left:0;} }
 
   /* ---------- hero ---------- */
   .hero{padding:56px 0 20px;}
@@ -93,7 +100,7 @@
   .tl-caption{font-family:var(--mono); font-size:10.5px; color:var(--ink-dim); opacity:.75; margin-top:2px; text-align:right;}
 
   /* ---------- section shell ---------- */
-  section{padding:56px 0;}
+  section{padding:56px 0; scroll-margin-top:88px;}
   .section-head{
     display:flex; align-items:baseline; gap:12px; margin-bottom:8px;
     border-top:2px solid var(--line); border-bottom:1px solid var(--line);
